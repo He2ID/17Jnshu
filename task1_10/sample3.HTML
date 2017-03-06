@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: #fff;
+			font:24px Helvetica; 
+		}
+		#main{
+			min-height: 800px;
+			margin: 0px;
+			padding: 0px;
+			display: -webkit-flex;
+			display: flex;
+			webkit-flex-flow:row;
+			flex-flow:row;
+		}
+		article{
+			margin: 4px;
+			padding: 5px;
+			border: 1px solid #cccc33;
+			border-radius: 7px;
+			background: #dddd88;
+			-webkit-flex:3 1 60%;
+			flex:3 1 60%;
+			-webkit-order:2;
+			order:2;
+		}
+		nav{
+			margin: 4px;
+			padding: 5px;
+			border: 1px solid #8888bb;
+			background-color: #ccccff;
+			-webkit-flex:1 6 20%;
+			flex:1 6 20%;
+			-webkit-order:1;
+			order:1;			
+		}
+		aside{
+			margin: 4px;
+			padding: 5px;
+			border: 1px solid #8888bb;
+			background-color:#556b2f ;	
+			-webkit-flex:1 6 20%;
+			flex:1 6 20%;
+			-webkit-order:3;
+			order:3;					
+		}
+		footer,header{
+			display: block;
+			margin: 4px;
+			padding: 5px;
+			border: 1px solid green;	
+			background: tomato;
+			min-height: 100px;		
+		}
+		@media all and (max-width: 640px){
+			#main{
+				-webkit-flex-flow:column;
+				flex-direction: column;
+			}
+			article,nav,aside{
+				-webkit-order:0;
+				order:0;
+			}
+			nav,aside,footer{
+				min-height: 50px;
+				max-height: 50px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>header</header>
+	<div id='main'>
+		<article>
+			<p>article /3 1 60%/ 2</p>
+		</article>
+		<nav>
+			<p>nav /1 6 20%/ 1</p>
+		</nav>
+		<aside>
+			<p>aside /1 6 20%/ 3</p>			
+		</aside>
+	</div>
+	<footer>footer</footer>
+</body>
+</html>
